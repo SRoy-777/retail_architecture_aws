@@ -1,12 +1,15 @@
 # Sales Data Pipeline – AWS S3 + Databricks
 
-## Overview
+![Status](https://img.shields.io/badge/Project-Production%20Style-blue)
+![Architecture](https://img.shields.io/badge/Architecture-Medallion-green)
 
-This project demonstrates an end-to-end data pipeline built using AWS S3 and Databricks, designed to process sales data from raw ingestion to reporting-ready datasets.
+Production-style data pipeline built using AWS S3 and Databricks, following Medallion Architecture (Bronze → Silver → Gold) and orchestrated using Databricks Workflows.
 
-The pipeline follows a Medallion Architecture (Bronze → Silver → Gold) and is orchestrated using Databricks Workflows.
+---
 
-The final output is consumed in Power BI dashboards with row-level security (RLS) implemented.
+## Tech Stack
+
+AWS S3 • Databricks • Python • SQL • Power BI
 
 ---
 
