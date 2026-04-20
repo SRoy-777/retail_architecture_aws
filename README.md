@@ -12,7 +12,7 @@ The final output is consumed in Power BI dashboards with row-level security (RLS
 
 ## Architecture
 
-![Architecture](./architecture/architecture.png)
+![Architecture](./architecture/architecture_diagram.png)
 
 BC365 API → AWS S3 (Bronze) → Databricks (Silver → Gold) → SQL Views → Power BI
 
@@ -26,7 +26,7 @@ bronze/
 silver/  
 gold/  
 
-![S3 Structure](./screenshots/s3_structure.png)
+![S3 Structure](./screenshots/medallion_architecture.png)
 
 ---
 
@@ -37,7 +37,9 @@ gold/
 
 ### Data Transformation
 - Bronze → Silver: Cleaning and schema standardization  
-- Silver → Gold: Business transformations and modeling  
+- Silver → Gold: Business transformations and modeling
+![Transformation](./screenshots/s3_import_&_EDA.png)
+![Transformation2](./screenshots/silver_to_gold_transformations.png)
 
 ### Orchestration
 - Implemented using Databricks Workflows  
@@ -45,7 +47,7 @@ gold/
 
 bronze_to_silver → silver_to_gold → create_views
 
-![Workflow](./screenshots/workflow_dag.png)
+![Workflow](./screenshots/automated_workflow_in_action.png)
 
 ---
 
@@ -55,9 +57,10 @@ bronze_to_silver → silver_to_gold → create_views
 - Connected to Power BI dashboards  
 - Row-Level Security (RLS) implemented  
 
-![Dashboard](./screenshots/powerbi_dashboard.png)
+![Dashboard](./screenshots/dashboard.png)
 
-![RLS](./screenshots/rls_setup.png)
+![RLS](./screenshots/Dynamic_RLS_table_security.png)
+![RLS_Testing](./screenshots/dynamic_rls_testing.png)
 
 ---
 
